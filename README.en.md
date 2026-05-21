@@ -54,10 +54,21 @@ List available skills
 
 You should see `paper-reading` in the list.
 
+## Recommended companion: Marginalia
+
+[Marginalia](https://github.com/chenhaoqcdyq/marginalia-releases) is a macOS desktop app — read a PDF on the left, an embedded Claude Code terminal on the right. Text you highlight in the PDF, the full paper, and the conversation history for each paper are all auto-injected into Claude's context.
+
+**A perfect pairing with this skill**:
+- **Marginalia** handles "getting the paper into Claude's context" — open a PDF and ask, no copy-paste, no manual `Read`
+- **paper-reading** handles "actually understanding, answering, evaluating, explaining" once the paper is there
+
+Workflow: open a paper in Marginalia → say "summarize" or "5C analysis" in the right-side terminal → the skill auto-triggers and grounds its answer in §3.2 / equation 4 directly.
+
 ## Usage
 
 **Prerequisite**: the paper's content must be in the conversation context. Common ways:
 
+- **Use [Marginalia](https://github.com/chenhaoqcdyq/marginalia-releases) (smoothest)**: open a PDF and the content is auto-injected; highlighted selections track automatically
 - Paste the paper text directly
 - Have Claude `Read` a local PDF
 - Have Claude `WebFetch` a URL (arXiv link, HTML paper, etc.)

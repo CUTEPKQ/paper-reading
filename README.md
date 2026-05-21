@@ -54,10 +54,21 @@ cd ~/code/paper-reading && ./install.sh
 
 应该看到 `paper-reading` 出现在列表里。
 
+## 推荐搭配：Marginalia
+
+[Marginalia](https://github.com/chenhaoqcdyq/marginalia-releases) 是一款 macOS 桌面应用——左边读 PDF，右边嵌入真·Claude Code 终端。PDF 上划选的文字、论文全文、每篇论文的对话历史，会自动注入到 Claude 的上下文里。
+
+**和本 skill 是天作之合**：
+- **Marginalia** 负责"把论文搬进 Claude 的上下文"——打开 PDF 就能问，无需复制粘贴、无需手动 Read
+- **paper-reading** 负责"在上下文里读懂、问答、评估、解释"
+
+工作流：在 Marginalia 打开论文 → 右侧终端直接说"总结一下"或"5C 评估"，skill 自动触发，回答里能直接引用 §3.2 / 公式 4。
+
 ## 使用
 
 **前提**：论文内容必须先进入对话上下文。常见做法：
 
+- **用 [Marginalia](https://github.com/chenhaoqcdyq/marginalia-releases)（最丝滑）**：打开 PDF 自动注入，划选片段自动跟踪
 - 直接把论文文本粘贴进对话
 - 让 Claude 用 Read 工具读本地 PDF
 - 让 Claude 用 WebFetch 拉取 URL（arXiv 链接、HTML 论文等）
