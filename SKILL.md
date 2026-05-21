@@ -45,9 +45,13 @@ Triggers: the user asks a specific question about the paper's content.
 - If the paper doesn't discuss it, say "the paper doesn't discuss this" — do not backfill with general knowledge.
 - Don't expand to unrelated topics.
 
-### 3. Term / formula / algorithm explanation
+### 3. Term / formula / algorithm / passage explanation
 
-Triggers: user asks "what does X mean", "what does this formula mean", "how does this algorithm work".
+Triggers: user asks "what does X mean", "what does this formula mean", "how does this algorithm work", "explain this part / section / passage", "用中文解释这部分", "这段在讲什么", "翻译解释".
+
+Distinguish two sub-cases. **When in doubt, default to the lighter sub-case (b).**
+
+#### (a) Single concept / term / formula / algorithm
 
 Three-part structure:
 1. **In the paper's context**: what this concept refers to here (ground it first).
@@ -55,6 +59,19 @@ Three-part structure:
 3. **Analogy / minimal example**: make it click.
 
 For formulas specifically: break down each symbol, explain the physical/intuitive meaning, give a minimal numeric example.
+
+#### (b) Passage / section / paragraph (e.g. "explain this part", "用中文解释这部分")
+
+Default: a **short paraphrase** — roughly 1-3 sentences per paragraph, ≤ 200 words total, surfacing the 2-3 most non-obvious terms inline if needed.
+
+DO NOT:
+- Quote the original passage sentence by sentence with a "解读" for each
+- Reproduce the original text verbatim
+- Apply the three-part structure from (a) to every sentence
+
+Sentence-by-sentence (逐句) treatment **only** when the user explicitly asks ("逐句解释", "逐句", "sentence by sentence", "go through it line by line").
+
+If the user wants more after the paraphrase, they will say so — always default to the lightest version.
 
 ### 4. Critical review
 

@@ -99,14 +99,19 @@ Say "one sentence" → compressed to 1-2 sentences. Say "go deeper" → expanded
 
 Direct answers about the paper's content. Every factual claim cites a paper location ("§3.2 says…", "Table 2 shows…"). If the paper doesn't discuss something, the skill says "the paper doesn't discuss this" rather than backfilling with general knowledge.
 
-### 3. Term / Formula / Algorithm Explanation
+### 3. Term / Formula / Algorithm / Passage Explanation
 
-Three-part structure:
+**Single concept / formula / algorithm** — three-part structure:
 1. **In the paper's context**: what this concept refers to here (ground it first)
 2. **In general**: the standard meaning (background — skipped if you already know it)
 3. **Analogy / minimal example**: make it click
 
 Formulas: break down each symbol → physical/intuitive meaning → minimal numeric example.
+
+**Passage / paragraph / section** (e.g. "explain this part") — short paraphrase:
+- Default: 1-3 sentences per paragraph, ≤ 200 words total, surfacing 2-3 non-obvious terms inline if needed
+- No sentence-by-sentence breakdown, no per-sentence "interpretation", no verbatim quoting
+- Sentence-by-sentence treatment only when explicitly requested ("line by line", "逐句")
 
 ### 4. Critical Review (the heaviest mode)
 
